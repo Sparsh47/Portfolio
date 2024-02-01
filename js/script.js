@@ -173,12 +173,12 @@ projects.forEach((project) => {
   var projectDesc = document.createElement("p");
   projectDesc.textContent = project.desc;
 
-  var techStack = document.createElement("ul");
-  project.tech.forEach((skill) => {
-    var skills = document.createElement("li");
-    skills.textContent = skill;
-    techStack.appendChild(skills);
-  });
+  // var techStack = document.createElement("ul");
+  // project.tech.forEach((skill) => {
+  //   var skills = document.createElement("li");
+  //   skills.textContent = skill;
+  //   techStack.appendChild(skills);
+  // });
 
   var projectLink = document.createElement("a");
   projectLink.href = project.src;
@@ -187,7 +187,7 @@ projects.forEach((project) => {
 
   projectDiv.appendChild(projectTitle);
   projectDiv.appendChild(projectDesc);
-  projectDiv.appendChild(techStack);
+  // projectDiv.appendChild(techStack);
   projectDiv.appendChild(projectLink);
 
   portfolio.appendChild(projectDiv);
