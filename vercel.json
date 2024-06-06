@@ -1,21 +1,21 @@
 {
   "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/index.html"
+      "source": "/",
+      "destination": "/"
     },
     {
-      "src": "/resume",
-      "dest": "/resume.html"
+      "source": "/resume",
+      "destination": "/resume"
     },
     {
-      "src": "/services",
-      "dest": "/services.html"
+      "source": "/services",
+      "destination": "/services"
     },
     {
-      "src": "/contact",
-      "dest": "/contact.html"
+      "source": "/contact",
+      "destination": "/contact"
     }
   ]
 }
