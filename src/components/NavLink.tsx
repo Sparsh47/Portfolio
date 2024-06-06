@@ -7,7 +7,6 @@ interface NavLinkProps {
 }
 
 const NavLink = ({ handleHover, handleHoverOut, link }: NavLinkProps) => {
-  const activeLink = window.location.pathname.slice(1);
   return (
     <div
       onMouseOver={handleHover}
