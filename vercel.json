@@ -1,21 +1,5 @@
 {
-  "version": 2,
   "rewrites": [
-    {
-      "source": "/",
-      "destination": "/"
-    },
-    {
-      "source": "/resume",
-      "destination": "/resume"
-    },
-    {
-      "source": "/services",
-      "destination": "/services"
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact"
-    }
+    {"source":"/(.*)", "destination":"/"}
   ]
 }
