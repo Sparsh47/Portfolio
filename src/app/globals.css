@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.char {
+  transform: translateY(115px);
+  opacity: 0;
+  transition: transform 0.5s;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 602px;
+  stroke-dashoffset: 602px;
+  animation: line-anim 2s ease-in-out forwards 0.7s;
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 577px;
+  stroke-dashoffset: 577px;
+  animation: line-anim 2s ease-in-out forwards 0.5s;
+}
+
+#logo path:nth-child(3) {
+  stroke-dasharray: 605px;
+  animation: line-anim 2s ease-in-out forwards 0.4s;
+  stroke-dashoffset: 605px;
+}
+
+#logo path:nth-child(4) {
+  stroke-dasharray: 519px;
+  animation: line-anim 2s ease-in-out forwards 0.3s;
+  stroke-dashoffset: 519px;
+}
+
+#logo path:nth-child(5) {
+  stroke-dasharray: 506px;
+  animation: line-anim 2s ease-in-out forwards 0.1s;
+  stroke-dashoffset: 506px;
+}
+
+#logo path:nth-child(6) {
+  stroke-dasharray: 577px;
+  animation: line-anim 2s ease-in-out forwards;
+  stroke-dashoffset: 577px;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.serviceCard:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff99;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff99bc;
+}
