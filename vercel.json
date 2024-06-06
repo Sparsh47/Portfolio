@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/resume",
+      "dest": "/resume.html"
+    },
+    {
+      "src": "/services",
+      "dest": "/services.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
+    }
+  ]
+}
