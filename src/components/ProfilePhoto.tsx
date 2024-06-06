@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profile from "../assets/images/profile.png";
+import profile from "../../public/profile.png";
 
 const ProfilePhoto = () => {
   return (
