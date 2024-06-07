@@ -8,7 +8,7 @@ const About = ({ data }: { data: any }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 px-5 gap-4">
         {data.info.map((info: any, index: number) => (
           // @ts-ignore
-          <div key={index} className="flex items-center gap-5">
+          <div key={index} className="flex items-center gap-1">
             <p className="text-sm md:text-md text-[#ccc]">{info.field}</p>
             <p className="text-md md:text-lg">{info.value}</p>
           </div>

@@ -1,13 +1,9 @@
 const ContactForm = () => {
   return (
     <div className="w-full lg:w-2/3 max-w-lg lg:max-w-none p-5 lg:p-10 bg-secondary rounded-lg shadow-xl">
-      <h2 className="text-2xl md:text-3xl text-accent">
+      <h2 className="text-2xl md:text-3xl text-accent py-4 md:py-8">
         Let&apos;s work together
       </h2>
-      <p className="py-4 md:py-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet
-        nunc lorem. Maecenas a.
-      </p>
       <form className="w-full flex flex-col gap-5 md:gap-10">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-5">
           <input

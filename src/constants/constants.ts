@@ -15,19 +15,19 @@ export const homeLinks = [
 export const services = [
     {
         title: "MERN Stack Development",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc lorem. Maecenas a."
+        desc: "Specializing in full-stack development using MongoDB, Express, React, and Node.js, I build robust and scalable web applications tailored to meet client needs."
     },
     {
         title: "Next.js Development",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc lorem. Maecenas a."
+        desc: "Leveraging the power of Next.js, I create dynamic, high-performance websites and applications with server-side rendering and static site generation."
     },
     {
         title: "UI/UX Design",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc lorem. Maecenas a."
+        desc: "Crafting intuitive and aesthetically pleasing user interfaces, I ensure a seamless user experience through thoughtful design and user-centric principles."
     },
     {
         title: "React Native Development",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc lorem. Maecenas a."
+        desc: "Developing cross-platform mobile applications using React Native, I deliver efficient and high-quality apps for both Android and iOS platforms."
     },
 ]
 
@@ -36,7 +36,7 @@ export const controlOptions = ["Experience", "Skills", "About me"]
 export const servicesInfo = [
     {
         title: "My Experience",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc lorem. Maecenas a.",
+        desc: "With hands-on experience in various aspects of web development, I have contributed to several projects, showcasing my skills in both frontend and backend development.",
         exp: [
             {
                 date: "04/2024 - Present",
@@ -57,7 +57,7 @@ export const servicesInfo = [
     },
     {
         title: "My Skills",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc lorem. Maecenas a.",
+        desc: "I possess a diverse set of skills in web development, ranging from front-end technologies like React and Next.js to back-end frameworks such as Node.js and Django.",
         skills: [
             {
                 icon: FaHtml5,
@@ -123,7 +123,7 @@ export const servicesInfo = [
     },
     {
         title: "About me",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc lorem. Maecenas a.",
+        desc: "I am a passionate web developer with over a year of experience in building and maintaining responsive websites. I am skilled in various technologies and always eager to learn more.",
         info: [
             {
                 field: "Name",

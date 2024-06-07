@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-background gap-10 pt-10 px-5 md:px-10 lg:px-20">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-background gap-10 py-10 px-5 md:px-10 lg:px-20">
       <div className="w-full flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0">
         <div className="w-full md:w-1/2 text-white flex flex-col items-center md:items-start px-5 py-10 md:py-14">
           <h2 className="capitalize py-3 text-2xl md:text-3xl">
@@ -41,28 +41,28 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full md:w-[72%] grid grid-cols-2 md:flex md:flex-wrap justify-center md:justify-around gap-6 text-white px-5 md:px-0">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col md:flex-row gap-3 items-center">
           <span className="text-4xl md:text-5xl font-black">200+</span>
           <span className="text-center md:text-left text-sm md:text-base">
             Code
             <br /> Commits
           </span>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col md:flex-row gap-3 items-center">
           <span className="text-4xl md:text-5xl font-black">50+</span>
           <span className="text-center md:text-left text-sm md:text-base">
             Github
             <br /> Repositories
           </span>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col md:flex-row gap-3 items-center">
           <span className="text-4xl md:text-5xl font-black">10+</span>
           <span className="text-center md:text-left text-sm md:text-base">
             Projects
             <br /> Completed
           </span>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col md:flex-row gap-3 items-center">
           <span className="text-4xl md:text-5xl font-black">5+</span>
           <span className="text-center md:text-left text-sm md:text-base">
             Technologies
