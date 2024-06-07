@@ -2,7 +2,7 @@ import ContactForm from "@/components/ContactForm";
 import { IconType } from "react-icons";
 import { IoCall, IoMail, IoLocation } from "react-icons/io5";
 
-const page = () => {
+const Contact = () => {
   return (
     <div className="bg-background w-full min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 p-5 py-20 text-white">
       <ContactForm />
@@ -26,4 +26,4 @@ const ContactCard = ({ Icon, value }: { Icon: IconType; value: string }) => {
   );
 };
 
-export default page;
+export default Contact;

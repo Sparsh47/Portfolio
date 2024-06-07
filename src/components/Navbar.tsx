@@ -34,6 +34,7 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <NavLink
               key={index}
+              onClick={toggleMenu}
               handleHover={handleHover}
               handleHoverOut={handleHoverOut}
               link={link}
@@ -54,6 +55,7 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <NavLink
               key={index}
+              onClick={toggleMenu}
               handleHover={handleHover}
               handleHoverOut={handleHoverOut}
               link={link}

@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 import About from "@/components/About";
 import { servicesInfo } from "@/constants/constants";
 
-const Page = () => {
+const Resume = () => {
   const [section, setSection] = useState(1);
 
   const handleSectionSelect = (number: number) => {
@@ -31,4 +31,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Resume;
