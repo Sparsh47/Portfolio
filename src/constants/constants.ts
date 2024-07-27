@@ -39,7 +39,12 @@ export const servicesInfo = [
         desc: "With hands-on experience in various aspects of web development, I have contributed to several projects, showcasing my skills in both frontend and backend development.",
         exp: [
             {
-                date: "04/2024 - Present",
+                date: "07/2024 - Present",
+                role: "Fullstack Developer Intern",
+                company: "The Curious Bunny Studios"
+            },
+            {
+                date: "04/2024 - 06/2024",
                 role: "MERN Stack Teaching Assistant",
                 company: "Coding Ninjas"
             },
