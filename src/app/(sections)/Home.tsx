@@ -23,7 +23,7 @@ const Home = () => {
           </p>
           <div className="w-full flex flex-col md:flex-row items-center gap-4 md:gap-8 text-accent">
             <Link
-              href="https://drive.google.com/file/d/1Z9mQkle1s0-GzbCWaf77PIhvmi4QBMWo/view"
+              href="https://drive.google.com/file/d/1zjCKdmTbw1P6DHFColwef0PnTVbNy51m/view?usp=sharing"
               className="flex gap-3 text-base items-center border border-accent rounded-full py-3 md:py-4 px-6 transition-all duration-200 ease-in-out hover:bg-accent hover:text-black"
             >
               Download CV
