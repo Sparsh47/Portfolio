@@ -79,7 +79,7 @@ const ContactForm = () => {
             ref={phoneRef}
             name="phoneNumber"
             type="number"
-            placeholder="Phone Number"
+            placeholder="Phone Number (with country code)"
             required
           />
         </div>
