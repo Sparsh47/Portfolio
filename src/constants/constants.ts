@@ -1,7 +1,25 @@
 import { BsGithub, BsTwitterX } from "react-icons/bs";
-import { FaLinkedinIn, FaHashnode, FaCss3Alt } from "react-icons/fa6";
+import { FaLinkedinIn, FaHashnode, FaCss3Alt, FaAws, FaGolang, FaDocker  } from "react-icons/fa6";
 import { FaHtml5, FaNodeJs } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiTailwindcss, SiBootstrap, SiReact, SiNextdotjs, SiMongodb, SiMysql, SiSocketdotio, SiReactrouter, SiGraphql, SiDjango, SiFlask } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
+import {
+    SiJavascript,
+    SiTypescript,
+    SiTailwindcss,
+    SiBootstrap,
+    SiReact,
+    SiNextdotjs,
+    SiMongodb,
+    SiMysql,
+    SiReactrouter,
+    SiGraphql,
+    SiDjango,
+    SiFlask,
+    SiRecoil,
+    SiZod,
+    SiPostgresql,
+    SiPrisma, SiTurborepo
+} from "react-icons/si";
 
 export const navLinks = ["Home", "Services", "Resume", "Contact"];
 
@@ -69,66 +87,35 @@ export const servicesInfo = [
         title: "My Skills",
         desc: "I possess a diverse set of skills in web development, ranging from front-end technologies like React and Next.js to back-end frameworks such as Node.js and Django.",
         skills: [
-            {
-                icon: FaHtml5,
-                text: "HTML",
-            },
-            {
-                icon: FaCss3Alt,
-                text: "CSS",
-            },
-            {
-                icon: SiJavascript,
-                text: "Javascript",
-            },
-            {
-                icon: SiTypescript,
-                text: "Typescript",
-            },
-            {
-                icon: SiTailwindcss,
-                text: "Tailwind CSS",
-            },
-            {
-                icon: SiBootstrap,
-                text: "Bootstrap",
-            },
-            {
-                icon: SiReact,
-                text: "React.js",
-            },
-            {
-                icon: SiNextdotjs,
-                text: "Next.js",
-            },
-            {
-                icon: FaNodeJs,
-                text: "Node.js",
-            },
-            {
-                icon: SiMongodb,
-                text: "MongoDB",
-            },
-            {
-                icon: SiMysql,
-                text: "MySQL",
-            },
-            {
-                icon: SiGraphql,
-                text: "GraphQL",
-            },
-            {
-                icon: SiReactrouter,
-                text: "React Router",
-            },
-            {
-                icon: SiDjango,
-                text: "Django",
-            },
-            {
-                icon: SiFlask,
-                text: "Flask",
-            }
+            // --- FRONTEND ---
+            { icon: FaHtml5,       text: "HTML" },
+            { icon: FaCss3Alt,     text: "CSS" },
+            { icon: SiJavascript,  text: "Javascript" },
+            { icon: SiTypescript,  text: "Typescript" },
+            { icon: SiReact,       text: "React.js" },
+            { icon: SiNextdotjs,   text: "Next.js" },
+            { icon: SiReactrouter, text: "React Router" },
+            { icon: SiRecoil,      text: "Recoil" },
+            { icon: SiTailwindcss, text: "Tailwind CSS" },
+            { icon: SiBootstrap,   text: "Bootstrap" },
+            { icon: SiZod,         text: "Zod" },
+
+            // --- BACKEND ---
+            { icon: FaNodeJs,      text: "Node.js" },
+            { icon: SiDjango,      text: "Django" },
+            { icon: SiFlask,       text: "Flask" },
+            { icon: FaGolang,      text: "GO" },
+            { icon: SiGraphql,     text: "GraphQL" },
+            { icon: SiMysql,       text: "MySQL" },
+            { icon: SiMongodb,     text: "MongoDB" },
+            { icon: SiPostgresql,  text: "PostgreSQL" },
+            { icon: DiRedis,       text: "Redis" },
+            { icon: SiPrisma,      text: "Prisma" },
+
+            // --- DEVOPS / MISC ---
+            { icon: FaAws,         text: "AWS" },
+            { icon: FaDocker,      text: "Docker" },
+            { icon: SiTurborepo,   text: "Turborepo" },
         ]
     },
     {
