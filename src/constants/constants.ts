@@ -21,7 +21,7 @@ import {
     SiPrisma, SiTurborepo
 } from "react-icons/si";
 
-export const navLinks = ["Home", "Services", "Resume", "Contact"];
+export const navLinks = ["Home", "Services", "Resume", "Projects", "Contact"];
 
 export const homeLinks = [
     { link: "https://github.com/Sparsh47", icon: BsGithub },
@@ -57,13 +57,18 @@ export const servicesInfo = [
         desc: "With hands-on experience in various aspects of web development, I have contributed to several projects, showcasing my skills in both frontend and backend development.",
         exp: [
             {
-                date: "10/2024 - Present",
+                date: "02/2025 - Present",
+                role: "Full-stack Developer",
+                company: "Eazytaxes"
+            },
+            {
+                date: "10/2024 - 02/2025",
                 role: "Software Developer Intern",
                 company: "Destino Solutions"
             },
             {
                 date: "07/2024 - 12/2024",
-                role: "Fullstack Developer Intern",
+                role: "Full-stack Developer Intern",
                 company: "The Curious Bunny Studios"
             },
             {

@@ -1,7 +1,7 @@
-import Service from "./(sections)/Services";
-import Resume from "./(sections)/Resume";
-import Contact from "./(sections)/Contact";
-import Home from "./(sections)/Home";
+import Service from "@/sections/Services";
+import Resume from "@/sections/Resume";
+import Contact from "@/sections/Contact";
+import Home from "@/sections/Home";
 import Footer from "@/components/Footer";
 
 export default function page() {
@@ -16,6 +16,9 @@ export default function page() {
       <div id="resume">
         <Resume />
       </div>
+    <div id="#projects">
+
+    </div>
       <div id="contact">
         <Contact />
       </div>

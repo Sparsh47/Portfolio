@@ -1,6 +1,6 @@
 import { BiDownload } from "react-icons/bi";
-import HomeLink from "../../components/HomeLink";
-import ProfilePhoto from "../../components/ProfilePhoto";
+import HomeLink from "../components/HomeLink";
+import ProfilePhoto from "../components/ProfilePhoto";
 import Link from "next/link";
 import { homeLinks } from "@/constants/constants";
 
@@ -23,7 +23,7 @@ const Home = () => {
           </p>
           <div className="w-full flex flex-col md:flex-row items-center gap-4 md:gap-8 text-accent">
             <Link
-              href="https://drive.google.com/file/d/1F5FVsCCvH3fNukp8BXFodmkklabdvpVl/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1KJhqJtLeJv39wbtjfM3T4iyJ2HD4ZCpR/view?usp=sharing"
               className="flex gap-3 text-base items-center border border-accent rounded-full py-3 md:py-4 px-6 transition-all duration-200 ease-in-out hover:bg-accent hover:text-black"
             >
               Download CV
