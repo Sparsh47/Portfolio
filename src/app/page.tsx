@@ -3,6 +3,7 @@ import Resume from "@/sections/Resume";
 import Contact from "@/sections/Contact";
 import Home from "@/sections/Home";
 import Footer from "@/components/Footer";
+import Projects from "@/sections/Projects";
 
 export default function page() {
   return (
@@ -17,7 +18,7 @@ export default function page() {
         <Resume />
       </div>
     <div id="#projects">
-
+        <Projects />
     </div>
       <div id="contact">
         <Contact />

@@ -1,5 +1,5 @@
 import { BsGithub, BsTwitterX } from "react-icons/bs";
-import { FaLinkedinIn, FaHashnode, FaCss3Alt, FaAws, FaGolang, FaDocker  } from "react-icons/fa6";
+import { FaLinkedinIn, FaHashnode, FaCss3Alt, FaAws, FaGolang, FaDocker } from "react-icons/fa6";
 import { FaHtml5, FaNodeJs } from "react-icons/fa";
 import { DiRedis } from "react-icons/di";
 import {
@@ -18,8 +18,15 @@ import {
     SiRecoil,
     SiZod,
     SiPostgresql,
-    SiPrisma, SiTurborepo
+    SiPrisma,
+    SiTurborepo
 } from "react-icons/si";
+import {
+    SiExpress,
+    SiSocketdotio
+} from "react-icons/si";
+import { v4 as uuidv4 } from "uuid";
+import { IconType } from "react-icons";
 
 export const navLinks = ["Home", "Services", "Resume", "Projects", "Contact"];
 
@@ -28,7 +35,7 @@ export const homeLinks = [
     { link: "https://www.linkedin.com/in/sparshshandilya/", icon: FaLinkedinIn },
     { link: "https://x.com/SparshShandily3", icon: BsTwitterX },
     { link: "https://sparsh-shandilya.hashnode.dev/", icon: FaHashnode }
-]
+];
 
 export const services = [
     {
@@ -47,9 +54,9 @@ export const services = [
         title: "React Native Development",
         desc: "Developing cross-platform mobile applications using React Native, I deliver efficient and high-quality apps for both Android and iOS platforms."
     },
-]
+];
 
-export const controlOptions = ["Experience", "Skills", "About me"]
+export const controlOptions = ["Experience", "Skills", "About me"];
 
 export const servicesInfo = [
     {
@@ -157,4 +164,45 @@ export const servicesInfo = [
             },
         ]
     }
-]
+];
+
+export const projects = [
+    {
+        id: uuidv4(),
+        title: "Versaile",
+        desc: "A collaborative text editor with real-time editing via Socket.IO and integrated AI for inbuilt content generation, built with React, Node.js, and MongoDB.",
+        image1: "/project1a.png",
+        image2: "/project1b.png",
+        skills: [
+            { text: "React", icon: SiReact },
+            { text: "Next.js", icon: SiNextdotjs },
+            { text: "Node.js", icon: FaNodeJs },
+            { text: "Express.js", icon: SiExpress },
+            { text: "MongoDB", icon: SiMongodb },
+            { text: "Socket.IO", icon: SiSocketdotio },
+            { text: "Tailwind CSS", icon: SiTailwindcss },
+        ],
+        links: {
+            liveUrl: "https://versaile.vercel.app",
+            githubUrl: "https://github.com/Sparsh47/versaile-frontend",
+        },
+    },
+    {
+        id: uuidv4(),
+        title: "Rest-Ez",
+        desc: "An API code generation platform with RESTful endpoints and secure authentication, built with Next.js, TypeScript, and MongoDB for streamlined development.",
+        image1: "/project2a.png",
+        image2: "/project2b.png",
+        skills: [
+            { text: "React", icon: SiReact },
+            { text: "Next.js", icon: SiNextdotjs },
+            { text: "MongoDB", icon: SiMongodb },
+            { text: "Tailwind CSS", icon: SiTailwindcss },
+            { text: "Typescript", icon: SiTypescript },
+        ],
+        links: {
+            liveUrl: "https://rest-ez.vercel.app",
+            githubUrl: "https://github.com/Sparsh47/rest-ez",
+        },
+    },
+];
