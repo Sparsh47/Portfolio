@@ -3,4 +3,5 @@ export type WorkItem = {
     date: string;
     role: string;
     company: string;
+    rank: number;
 };
