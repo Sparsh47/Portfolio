@@ -5,3 +5,10 @@ export type WorkItem = {
     company: string;
     rank: number;
 };
+
+export type ServiceItem = {
+    id: string;
+    title: string;
+    desc: string;
+    rank: number;
+}

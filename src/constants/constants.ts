@@ -59,42 +59,7 @@ export const services = [
 export const controlOptions = ["Experience", "Skills", "About me"];
 
 export const servicesInfo = [
-    {
-        title: "My Experience",
-        desc: "With hands-on experience in various aspects of web development, I have contributed to several projects, showcasing my skills in both frontend and backend development.",
-        exp: [
-            {
-                date: "02/2025 - Present",
-                role: "Full-stack Developer",
-                company: "Eazytaxes"
-            },
-            {
-                date: "10/2024 - 02/2025",
-                role: "Software Developer Intern",
-                company: "Destino Solutions"
-            },
-            {
-                date: "07/2024 - 12/2024",
-                role: "Full-stack Developer Intern",
-                company: "The Curious Bunny Studios"
-            },
-            {
-                date: "04/2024 - 06/2024",
-                role: "MERN Stack Teaching Assistant",
-                company: "Coding Ninjas"
-            },
-            {
-                date: "02/2024 - 03/2024",
-                role: "Next.js Developer Intern",
-                company: "Web3ProjectLinks"
-            },
-            {
-                date: "08/2023 - 09/2023",
-                role: "Web Developer Intern",
-                company: "CODSOFT"
-            },
-        ]
-    },
+    {},
     {
         title: "My Skills",
         desc: "I possess a diverse set of skills in web development, ranging from front-end technologies like React and Next.js to back-end frameworks such as Node.js and Django.",
