@@ -39,7 +39,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="w-full lg:w-2/3 max-w-lg lg:max-w-none p-5 lg:p-10 bg-secondary rounded-lg shadow-xl">
+    <div className="w-full xl:w-2/3 p-5 lg:p-10 bg-secondary rounded-lg shadow-xl">
       <h2 className="text-2xl md:text-3xl text-accent py-4 md:py-8">
         Let&apos;s work together
       </h2>

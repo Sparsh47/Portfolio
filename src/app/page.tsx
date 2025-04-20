@@ -17,7 +17,7 @@ export default function page() {
       <div id="resume">
         <Resume />
       </div>
-    <div id="#projects">
+    <div id="projects">
         <Projects />
     </div>
       <div id="contact">

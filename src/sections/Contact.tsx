@@ -4,9 +4,9 @@ import { IoCall, IoMail, IoLocation } from "react-icons/io5";
 
 const Contact = () => {
   return (
-    <div className="bg-background w-full min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 p-5 py-20 text-white">
+    <div className="bg-background w-full min-h-screen flex flex-col items-center justify-center gap-10 lg:gap-20 p-5 py-20 text-white">
       <ContactForm />
-      <div className="w-full hidden lg:w-1/4 md:flex flex-col justify-center gap-8">
+      <div className="w-full hidden lg:flex justify-center gap-8">
         <ContactCard Icon={IoCall} value="(+91) 92895 97139" />
         <ContactCard Icon={IoMail} value="sparshshandilya123@gmail.com" />
         <ContactCard Icon={IoLocation} value="Delhi, India" />
