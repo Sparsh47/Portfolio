@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-20 py-5 z-10 bg-transparent">
       <Link href="/" className="text-white font-black text-2xl md:text-4xl">
-        Sparshy<span className="text-accent">.</span>
+        Sparsh<span className="text-accent">.</span>
       </Link>
       <div className="flex items-center justify-center md:gap-10 text-white">
         <div className="hidden md:flex items-center gap-10">
