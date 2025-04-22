@@ -1,18 +1,14 @@
 import Image from "next/image";
-import { IconType } from "react-icons";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
+import {ProjectItem} from "@/types/firebaseTypes";
+import DynamicIcon from "@/components/DynamicIcon";
 
 type SkillsType = {
     text: string;
-    icon: IconType;
+    icon: string;
 };
-
-type LinksType = {
-    liveUrl: string;
-    githubUrl: string;
-}
 
 export default function ProjectCard({
                                         image1,
@@ -21,14 +17,7 @@ export default function ProjectCard({
                                         desc,
                                         skills,
                                         links
-                                    }: {
-    image1: string,
-    image2: string,
-    title: string,
-    desc: string,
-    skills: SkillsType[],
-    links: LinksType
-}) {
+                                    }: Omit<ProjectItem, "id">) {
     return (
         <div className="w-full flex flex-col md:flex-row items-start justify-between gap-12">
             <div className="lg:w-[800px] h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl p-2 group relative border border-gray-700 overflow-hidden cursor-pointer">
@@ -87,11 +76,11 @@ export default function ProjectCard({
     )
 }
 
-function SkillCard({text, icon: Icon}: SkillsType) {
+function SkillCard({ text, icon }: { text: string; icon: string }) {
     return (
-        <div className="p-2 border border-gray-700 rounded-lg flex items-center justify-center gap-2 hover:text-accent cursor-pointer">
-            <Icon />
-            <span className="text-sm font-light">{text}</span>
+        <div className="p-2 border rounded-lg flex items-center gap-2">
+            {/*<DynamicIcon iconName={icon} />*/}
+            <span className="text-sm">{text}</span>
         </div>
-    )
+    );
 }
