@@ -66,14 +66,14 @@ const Home: FC = () => {
               digital experiences with a flair for modern web technologies.
             </p>
             <div className="w-full flex flex-col md:flex-row items-center gap-4 md:gap-8 text-accent">
+              <Link
+                  href="https://drive.google.com/file/d/1KJhqJtLeJv39wbtjfM3T4iyJ2HD4ZCpR/view?usp=sharing"
+                  className="home-button flex gap-3 text-base items-center border border-accent rounded-full py-3 md:py-4 px-6 transition-all duration-200 ease-in-out hover:bg-accent hover:text-black"
+              >
+                Download CV
+                <BiDownload className="w-5 h-5 md:w-6 md:h-6" />
+              </Link>
               <div className="home-button flex items-center gap-5">
-                <Link
-                    href="https://drive.google.com/file/d/1KJhqJtLeJv39wbtjfM3T4iyJ2HD4ZCpR/view?usp=sharing"
-                    className="flex gap-3 text-base items-center border border-accent rounded-full py-3 md:py-4 px-6 transition-all duration-200 ease-in-out hover:bg-accent hover:text-black"
-                >
-                  Download CV
-                  <BiDownload className="w-5 h-5 md:w-6 md:h-6" />
-                </Link>
                 {homeLinks.map((link, index) => (
                     <HomeLink key={index} link={link.link} Icon={link.icon} />
                 ))}
