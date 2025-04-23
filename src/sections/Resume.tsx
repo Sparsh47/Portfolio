@@ -28,7 +28,6 @@ const Resume = () => {
         })();
     }, []);
 
-    // Animate section when it changes
     useLayoutEffect(() => {
         if (!sectionRef.current) return;
 
@@ -53,7 +52,6 @@ const Resume = () => {
 
     return (
         <div className="bg-background w-full min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 text-white p-5">
-            {/* Left side controls */}
             <div className="w-full lg:w-1/4 h-auto lg:h-1/2">
                 <ResumeControls
                     section={section}
@@ -61,7 +59,6 @@ const Resume = () => {
                 />
             </div>
 
-            {/* Right side section content */}
             <div
                 ref={sectionRef}
                 className="w-full lg:w-2/3 h-auto lg:h-2/3"
