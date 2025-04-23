@@ -1,4 +1,3 @@
-// src/sections/Service.tsx
 "use client";
 
 import React, { FC, useEffect, useState, useLayoutEffect, useRef } from "react";
@@ -12,7 +11,6 @@ const Service: FC = () => {
     const [services, setServices] = useState<ServiceItem[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    // fetch your data
     useEffect(() => {
         (async () => {
             const items = await fetchServices();
@@ -20,7 +18,6 @@ const Service: FC = () => {
         })();
     }, []);
 
-    // animate the cards in one smooth, staggered sequence
     useLayoutEffect(() => {
         if (!containerRef.current || services.length === 0) return;
 
@@ -33,7 +30,7 @@ const Service: FC = () => {
                 scrollTrigger: {
                     trigger: containerRef.current!,
                     start: "top 85%",
-                    toggleActions: "play none none none",
+                    toggleActions: "play play play play",
                 },
                 y: 40,
                 opacity: 0,

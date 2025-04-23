@@ -1,14 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
-import {ProjectItem} from "@/types/firebaseTypes";
-import DynamicIcon from "@/components/DynamicIcon";
-
-type SkillsType = {
-    text: string;
-    icon: string;
-};
+import { useLayoutEffect, useRef } from "react";
+import { ProjectItem } from "@/types/firebaseTypes";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import DynamicIcon from "@/components/DynamicIcon";
 
 export default function ProjectCard({
                                         image1,
@@ -16,10 +16,53 @@ export default function ProjectCard({
                                         title,
                                         desc,
                                         skills,
-                                        links
+                                        links,
                                     }: Omit<ProjectItem, "id">) {
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    useLayoutEffect(() => {
+        if (!cardRef.current) return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const ctx = gsap.context(() => {
+            const badges = gsap.utils.toArray<HTMLDivElement>(".skill-badge")
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: cardRef.current,
+                    start: "top 85%",
+                    toggleActions: "play none none none",
+                },
+            });
+
+            tl.from(cardRef.current, {
+                opacity: 0,
+                y: 80,
+                duration: 0.7,
+                ease: "power3.out",
+            });
+
+            tl.from(
+                badges,
+                {
+                    opacity: 0,
+                    y: 20,
+                    stagger: 0.1,
+                    duration: 0.3,
+                    ease: "power2.out",
+                },
+                "-=0.5"
+            );
+        }, cardRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <div className="w-full flex flex-col md:flex-row items-start justify-between gap-12">
+        <div
+            ref={cardRef}
+            className="w-full flex flex-col md:flex-row items-start justify-between gap-12"
+        >
             <div className="lg:w-[800px] h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl p-2 group relative border border-gray-700 overflow-hidden cursor-pointer">
                 <Image
                     width={1000}
@@ -37,6 +80,7 @@ export default function ProjectCard({
                 />
                 <div className="absolute w-full top-0 h-[1.5px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
             </div>
+
             <div className="w-full md:max-w-md lg:max-w-lg flex flex-col">
                 <div className="mb-4 flex gap-5">
                     <h3 className="text-3xl font-medium">{title}</h3>
@@ -73,13 +117,13 @@ export default function ProjectCard({
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 function SkillCard({ text, icon }: { text: string; icon: string }) {
     return (
-        <div className="p-2 border rounded-lg flex items-center gap-2">
-            {/*<DynamicIcon iconName={icon} />*/}
+        <div className="skill-badge p-2 border rounded-lg flex items-center gap-2">
+            {/* <DynamicIcon iconName={icon} /> */}
             <span className="text-sm">{text}</span>
         </div>
     );
