@@ -40,7 +40,7 @@ const Contact = () => {
         >
             <ContactForm />
             <div className="w-full hidden lg:flex justify-center gap-8">
-                <ContactCard Icon={IoCall} value="(+91) 92895 97139" />
+                <ContactCard Icon={IoCall} value="(+91) 92667 34499" />
                 <ContactCard Icon={IoMail} value="sparshshandilya123@gmail.com" />
                 <ContactCard Icon={IoLocation} value="Delhi, India" />
             </div>

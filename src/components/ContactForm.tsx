@@ -1,10 +1,14 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {fetchServices} from "@/lib/utils";
+import {ServiceItem} from "@/types/firebaseTypes";
 
 const ContactForm = () => {
+  const [services, setServices] = useState<ServiceItem[]>([]);
+
   const formRef = useRef<HTMLDivElement>(null);
   const fNameRef = useRef<HTMLInputElement>(null);
   const lNameRef = useRef<HTMLInputElement>(null);
@@ -12,6 +16,13 @@ const ContactForm = () => {
   const phoneRef = useRef<HTMLInputElement>(null);
   const serviceRef = useRef<HTMLSelectElement>(null);
   const descRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    (async () => {
+      const items = await fetchServices();
+      setServices(items);
+    })();
+  }, []);
 
   useLayoutEffect(() => {
     if (!formRef.current) return;
@@ -134,12 +145,9 @@ const ContactForm = () => {
               defaultValue="Select a Service"
           >
             <option disabled>Select a Service</option>
-            <option value="Next.js Development">Next.js Development</option>
-            <option value="MERN Development">MERN Development</option>
-            <option value="React Native Development">
-              React Native Development
-            </option>
-            <option value="UI/UX Design">UI/UX Design</option>
+            {services && services.sort((a, b)=>a.rank-b.rank).map((service, index)=>(
+                <option key={index} value={service.title}>{service.title}</option>
+            ))}
           </select>
           <textarea
               className="w-full bg-background rounded-md p-2 outline-accent"

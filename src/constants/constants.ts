@@ -26,9 +26,34 @@ import {
     SiSocketdotio
 } from "react-icons/si";
 import { v4 as uuidv4 } from "uuid";
-import { IconType } from "react-icons";
+import {NavLinksType} from "@/types/navbar";
 
-export const navLinks = ["Home", "Services", "Resume", "Projects", "Contact"];
+export const navLinks: NavLinksType = [
+    {
+        text: "Home",
+        href: "#home",
+    },
+    {
+        text: "Services",
+        href: "#services",
+    },
+    {
+        text: "Resume",
+        href: "#resume",
+    },
+    {
+        text: "Projects",
+        href: "#projects",
+    },
+    {
+        text: "Blogs",
+        href: "#blogs",
+    },
+    {
+        text: "Contact",
+        href: "#contact",
+    }
+];
 
 export const homeLinks = [
     { link: "https://github.com/Sparsh47", icon: BsGithub },

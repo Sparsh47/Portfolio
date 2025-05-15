@@ -3,7 +3,10 @@ import Link from "next/link";
 interface NavLinkProps {
   handleHover: (event: any) => void;
   handleHoverOut: (event: any) => void;
-  link: String;
+  link: {
+    text: string;
+    href: string;
+  };
   onClick: () => void;
 }
 
@@ -21,7 +24,7 @@ const NavLink = ({
       className="relative cursor-pointer"
     >
       <div className="animate absolute bottom-0 w-0 h-[2px] bg-accent"></div>
-      <Link href={`#${link.toLowerCase()}`}>{link}</Link>
+      <Link href={link.href}>{link.text}</Link>
     </div>
   );
 };

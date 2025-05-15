@@ -94,3 +94,11 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.text-shadow-white {
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.group:hover .text-shadow-accent {
+  text-shadow: -1px -1px 0 #00ff99, 1px -1px 0 #00ff99, -1px 1px 0 #00ff99, 1px 1px 0 #00ff99;
+}

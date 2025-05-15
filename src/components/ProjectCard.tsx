@@ -122,7 +122,7 @@ export default function ProjectCard({
 
 function SkillCard({ text, icon }: { text: string; icon: string }) {
     return (
-        <div className="skill-badge p-2 border rounded-lg flex items-center gap-2">
+        <div className="skill-badge p-2 border rounded-lg flex items-center gap-2 cursor-pointer hover:border-accent hover:text-accent duration-150 ease-in-out transition-all">
             {/* <DynamicIcon iconName={icon} /> */}
             <span className="text-sm">{text}</span>
         </div>

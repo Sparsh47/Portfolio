@@ -46,13 +46,13 @@ const Service: FC = () => {
     return (
         <div
             ref={containerRef}
-            className="bg-background w-full min-h-screen flex flex-col items-center justify-center gap-10 text-white px-5"
+            className="bg-background w-full min-h-screen flex flex-col items-center justify-center gap-10 text-white px-14"
         >
             <h1 className="text-4xl mt-20 md:mt-0 md:text-5xl lg:text-6xl font-bold text-center">
                 What I Do<span className="text-accent">?</span>
             </h1>
 
-            <div className="w-full md:w-[80%] xl:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-10">
                 {services.length > 0 &&
                     services
                         .sort((a, b) => a.rank - b.rank)
