@@ -60,8 +60,10 @@ const ProfilePhoto = () => {
         >
           <div className="w-full h-full">
             <Image
-              src={profile}
+              src="/profile.jpeg"
               alt="Profile"
+              width={1000}
+              height={1000}
               className="w-full h-full rounded-full p-1 object-cover"
             />
           </div>
