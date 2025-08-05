@@ -27,4 +27,5 @@ export type ProjectItem = {
         text: string;
         icon: string;
     }[]
+    type: string;
 }
