@@ -34,7 +34,7 @@ const Loader = ({
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [handleLoading]);
 
   return (
     <div className="h-screen w-full overflow-hidden bg-black">

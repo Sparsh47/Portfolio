@@ -54,6 +54,10 @@ export const navLinks: NavLinksType = [
     href: "#blogs",
   },
   {
+    text: "Testimonials",
+    href: "#testimonials"
+  },
+  {
     text: "Contact",
     href: "#contact",
   },
@@ -157,5 +161,38 @@ export const servicesInfo = [
         value: "English, Hindi",
       },
     ],
+  },
+];
+
+export const testimonials = [
+  {
+    id: uuidv4(),
+    name: "ECHO Agency",
+    position: "React Native Developer (via ECHO Agency for Boozeburg)",
+    content: "Sparsh brought the Boozeburg mobile app to life flawlessly. His attention to detail and seamless integration of our designs made the entire development process a breeze.",
+    avatarText: "EC",
+  },
+  {
+    id: uuidv4(),
+    name: "Curious Bunny Studios",
+    position: "Fullstack Developer (via Curious Bunny Studios for MBM School)",
+    content: "We partnered with Sparsh for the MBM School website and were blown away by his dedication. He perfectly translated our creative vision into a highly performant and interactive web experience.",
+    avatarText: "CB",
+    featured: true,
+    badge: "Reliable Partner",
+  },
+  {
+    id: uuidv4(),
+    name: "Curious Bunny Studios",
+    position: "Software Developer (via Curious Bunny Studios for Cash Vision)",
+    content: "For the Cash Vision website, Sparsh once again proved to be an invaluable asset. His frontend skills and logic modeling are top-notch, delivering a seamless experience.",
+    avatarText: "CB",
+  },
+  {
+    id: uuidv4(),
+    name: "Curious Bunny Studios",
+    position: "Fullstack Developer (for Curious Bunny Studios)",
+    content: "After seeing his amazing work on client projects, we hired Sparsh to build our own landing page. The animations and sleek responsive design perfectly represent our studio's brand.",
+    avatarText: "CB",
   },
 ];
