@@ -7,6 +7,9 @@ import { testimonials as fallbackTestimonials } from "@/constants/constants";
 import TestimonialCard from "@/components/TestimonialCard";
 import { fetchTestimonials } from "@/lib/utils";
 import { TestimonialItem } from "@/types/firebaseTypes";
+import TestimonialFlex from "./Testimonials/TestimonialFlex";
+import TestimonialSlider from "./Testimonials/TestimonialSlider";
+import TestimonialBento from "./Testimonials/TestimonialBento";
 
 const Testimonials = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -81,12 +84,10 @@ const Testimonials = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
-        {data.map((testimonial) => (
-          <div key={testimonial.id} className="testimonial-item h-full">
-            <TestimonialCard testimonial={testimonial} />
-          </div>
-        ))}
+      <div className="w-full flex justify-center">
+        {data.length > 0 && data.length <= 3 && <TestimonialFlex data={data} />}
+        {data.length === 4 && <TestimonialSlider data={data} />}
+        {data.length >= 5 && <TestimonialBento data={data} />}
       </div>
     </div>
   );

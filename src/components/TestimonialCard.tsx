@@ -19,8 +19,8 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
     >
       {/* Featured Badge */}
       {isFeatured && (
-        <span className="absolute -top-3 left-8 bg-[#ffeada] text-[#d47b3b] text-xs font-bold px-3 py-1 rounded-md">
-          {testimonial.badge || "Customer-Driven Strategy"}
+        <span className="absolute -top-3 left-8 bg-accent text-black text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full shadow-sm">
+          {testimonial.badge || "Featured"}
         </span>
       )}
 
