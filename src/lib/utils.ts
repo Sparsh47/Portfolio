@@ -2,7 +2,7 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/firebase";
-import { ProjectItem, ServiceItem, WorkItem } from "@/types/firebaseTypes";
+import { ProjectItem, ServiceItem, TestimonialItem, WorkItem } from "@/types/firebaseTypes";
 
 export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
@@ -34,6 +34,17 @@ export const fetchServices = async (): Promise<ServiceItem[]> => {
   const snapshot = await getDocs(collection(db, "services"));
   return snapshot.docs.map((doc) => {
     const data = doc.data() as Omit<ServiceItem, "id">;
+    return {
+      id: doc.id,
+      ...data,
+    };
+  });
+};
+
+export const fetchTestimonials = async (): Promise<TestimonialItem[]> => {
+  const snapshot = await getDocs(collection(db, "testimonials"));
+  return snapshot.docs.map((doc) => {
+    const data = doc.data() as Omit<TestimonialItem, "id">;
     return {
       id: doc.id,
       ...data,

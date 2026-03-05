@@ -29,3 +29,13 @@ export type ProjectItem = {
     }[]
     type: string;
 }
+
+export type TestimonialItem = {
+    id: string;
+    name: string;
+    position: string;
+    content: string;
+    avatarText?: string;
+    featured?: boolean;
+    badge?: string;
+}
