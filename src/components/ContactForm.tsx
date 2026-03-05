@@ -4,12 +4,13 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { toast } from "sonner";
-import { fetchServices } from "@/lib/utils";
+import { cn, fetchServices } from "@/lib/utils";
 import { ServiceItem } from "@/types/firebaseTypes";
 
 const ContactForm = () => {
   const [services, setServices] = useState<ServiceItem[]>([]);
   const [isSending, setIsSending] = useState(false);
+  const [needsConfirmation, setNeedsConfirmation] = useState(false);
 
   const formRef = useRef<HTMLDivElement>(null);
   const fNameRef = useRef<HTMLInputElement>(null);
@@ -64,9 +65,58 @@ const ContactForm = () => {
     return () => ctx.revert();
   }, []);
 
+  const validate = () => {
+    const fName = fNameRef.current?.value.trim();
+    const lName = lNameRef.current?.value.trim();
+    const email = emailRef.current?.value.trim();
+    const phone = phoneRef.current?.value.trim();
+    const service = serviceRef.current?.value;
+    const desc = descRef.current?.value.trim();
+
+    if (!fName || !lName) {
+      toast.error("Please enter your full name");
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      toast.error("Please enter a valid email address");
+      return false;
+    }
+
+    if (!phone || phone.length < 10) {
+      toast.error("Please enter a valid phone number (at least 10 digits)");
+      return false;
+    }
+
+    if (service === "Select a Service" || !service) {
+      toast.error("Please select a service you're interested in");
+      return false;
+    }
+
+    if (!desc || desc.length < 10) {
+      toast.error("Please provide a brief description of your project (min 10 characters)");
+      return false;
+    }
+
+    return true;
+  };
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    if (!validate()) return;
+
+    if (!needsConfirmation) {
+      setNeedsConfirmation(true);
+      toast.info("Click 'Confirm' to send your message", {
+        description: "Please double-check your details before confirming.",
+      });
+      return;
+    }
+
     setIsSending(true);
+    setNeedsConfirmation(false);
 
     const fName = fNameRef.current?.value;
     const lName = lNameRef.current?.value;
@@ -75,7 +125,7 @@ const ContactForm = () => {
     const service = serviceRef.current?.value;
     const desc = descRef.current?.value;
 
-    const loadingToast = toast.loading("Sending email...");
+    const loadingToast = toast.loading("Sending your message...");
 
     try {
       const response = await fetch("/api/sendEmail", {
@@ -91,18 +141,14 @@ const ContactForm = () => {
       toast.dismiss(loadingToast);
 
       if (result.success) {
-        toast.success("Email sent successfully");
-
+        toast.success("Message sent! I'll get back to you soon.");
         e.currentTarget.reset();
-        setIsSending(false);
       } else {
         toast.error(result.message || "Failed to send email");
-        setIsSending(false);
       }
     } catch (error) {
-      setIsSending(false);
       toast.dismiss(loadingToast);
-      toast.error("Something went wrong. Please try again.");
+      toast.error("Connectivity issue. Please check network and try again.");
     } finally {
       setIsSending(false);
     }
@@ -179,8 +225,17 @@ const ContactForm = () => {
           placeholder="Enter your message here"
           rows={7}
         />
-        <button className="py-2 px-5 rounded-full bg-accent text-black">
-          Send Message
+        <button
+          disabled={isSending}
+          className={cn(
+            "py-3 px-8 rounded-full font-bold transition-all duration-300 self-start",
+            needsConfirmation
+              ? "bg-yellow-500 text-black hover:bg-yellow-400 scale-105"
+              : "bg-accent text-black hover:opacity-90",
+            isSending && "opacity-50 cursor-not-allowed"
+          )}
+        >
+          {isSending ? "Sending..." : needsConfirmation ? "Confirm Submission?" : "Send Message"}
         </button>
       </form>
     </div>
