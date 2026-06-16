@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import Projects from "@/sections/Projects";
 import { useEffect, useState } from "react";
 import Loader from "@/components/SiteLoader";
-import Blogs from "@/sections/Blogs";
+
 import Testimonials from "@/sections/Testimonials";
 
 export default function Page() {
@@ -36,9 +36,6 @@ export default function Page() {
                     </div>
                     <div id="projects">
                         <Projects />
-                    </div>
-                    <div id="blogs">
-                        <Blogs />
                     </div>
                     <div id="testimonials">
                         <Testimonials />

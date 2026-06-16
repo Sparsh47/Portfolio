@@ -6,11 +6,10 @@ import NavLink from "./NavLink";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 import {navLinks} from "@/constants/constants";
-import {usePathname} from "next/navigation";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
 
   const handleHover = (event: any) => {
     const div = event.currentTarget.querySelector(".animate");
@@ -32,7 +31,7 @@ const Navbar = () => {
         Sparsh<span className="text-accent">.</span>
       </Link>
       <div className="flex items-center justify-center md:gap-10 text-white">
-        {!pathname.includes("blogs") && <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks!.map((link, index) => (
               <NavLink
                   key={index}
@@ -42,15 +41,15 @@ const Navbar = () => {
                   link={link}
               />
           ))}
-        </div>}
-        {!pathname.includes("blogs") && <div className="md:hidden flex items-center">
+        </div>
+        <div className="md:hidden flex items-center">
           <button
               onClick={toggleMenu}
               className="text-white focus:outline-none"
           >
             {isOpen ? <HiX size={24}/> : <HiMenu size={24}/>}
           </button>
-        </div>}
+        </div>
       </div>
       {isOpen && (
         <div className="absolute w-full px-5 text-white top-16 left-0 bg-background rounded-xl border border-accent flex flex-col items-center gap-4 py-5 md:hidden">

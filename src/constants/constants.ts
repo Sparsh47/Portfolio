@@ -50,10 +50,6 @@ export const navLinks: NavLinksType = [
     href: "#projects",
   },
   {
-    text: "Blogs",
-    href: "#blogs",
-  },
-  {
     text: "Testimonials",
     href: "#testimonials"
   },
